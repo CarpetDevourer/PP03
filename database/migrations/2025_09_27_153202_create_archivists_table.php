@@ -1,0 +1,31 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('archivists', function (Blueprint $table) {
+            $table->id();
+            $table->string('login')->unique(); // Уникальный логин
+            $table->string('password'); // Для хранения хэша пароля
+            $table->string('name'); // ФИО архивариуса
+            $table->rememberToken(); // Для функции "Запомнить меня"
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('archivists');
+    }
+};

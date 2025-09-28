@@ -1,0 +1,68 @@
+.formContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+ .formSection {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.requestForm .formSection h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.formGroup.full-width {
+    grid-column: 1 / -1;
+}
+
+.formActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formContainer {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
