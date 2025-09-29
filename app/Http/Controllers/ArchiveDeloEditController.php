@@ -25,7 +25,7 @@ class archiveDeloEditController extends Controller
                 'status' => 'required|in:new,in_progress,completed'
             ]);
 
-            // Добавляем имя архивариуса
+
             $validated['archivist_name'] = auth()->user()->name ?? 'Система';
 
             $archiveRequest->update($validated);
