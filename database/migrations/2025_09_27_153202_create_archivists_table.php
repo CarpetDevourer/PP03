@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('archivists', function (Blueprint $table) {
             $table->id();
-            $table->string('login')->unique(); // Уникальный логин
-            $table->string('password'); // Для хранения хэша пароля
-            $table->string('name'); // ФИО архивариуса
-            $table->rememberToken(); // Для функции "Запомнить меня"
+            $table->string('login')->unique();
+            $table->string('password');
+            $table->string('name');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
