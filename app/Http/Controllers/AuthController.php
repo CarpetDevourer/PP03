@@ -6,13 +6,11 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    // Показать форму входа
     public function showLoginForm()
     {
         return view('pages.login');
     }
 
-    // Обработка входа
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -29,7 +27,6 @@ class AuthController extends Controller
         ]);
     }
 
-    // Выход
     public function logout(Request $request)
     {
         $request->session()->invalidate();

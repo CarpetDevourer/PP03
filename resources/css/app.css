@@ -70,7 +70,6 @@ section{
 }
 
 
-/* Table styles */
 .requests-table, .cases-table {
     width: 100%;
     border-collapse: collapse;
@@ -89,7 +88,6 @@ section{
     border-bottom: 1px solid var(--border);
 }
 
-/* Status badges */
 .status-badge {
     padding: 4px 12px;
     border-radius: 20px;

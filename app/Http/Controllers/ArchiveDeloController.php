@@ -12,7 +12,7 @@ class ArchiveDeloController extends Controller
 {
     public function create()
     {
-        return view('pages.main'); // Убедитесь, что этот view существует
+        return view('pages.main');
     }
     public function store(HttpRequest $request)
     {

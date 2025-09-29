@@ -30,18 +30,16 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/archiveDelo/{id}/edit', [archiveDeloEditController::class, 'edit'])->name('archiveDelo.edit');
 Route::put('/archiveDelo/{id}', [archiveDeloEditController::class, 'update'])->name('archiveDelo.update');
 
-// Для главной страницы с формой
+
 Route::get('/', [ArchiveDeloController::class, 'create'])->name('main');
 
 Route::post('/archiveDelo', [ArchiveDeloController::class, 'store'])->name('archiveDelo.store');
 
-// Для панели управления
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-// Маршрут для сохранения дела
+
 Route::post('/archiveDelo', [ArchiveDeloController::class, 'store'])->name('archiveDelo.store');
 
-// Маршрут для редактирования дела
 Route::get('/archiveDelo/{id}/edit', [ArchiveDeloController::class, 'edit'])->name('archiveDelo.edit');
 
-// Маршрут для обновления дела
 Route::put('/archiveDelo/{id}', [ArchiveDeloController::class, 'update'])->name('archiveDelo.update');
